@@ -1,6 +1,6 @@
 # Winnie Cheng
 
-Product manager who builds. Since March 2026: **2,827 commits** and **565 merged PRs** across 4 private AI projects, built with Claude Code. The repos are private, so these are the stats.
+Product manager who builds. Since Mar 2026: **2,828 commits** and **565 merged PRs** across 4 private AI projects, built with Claude Code. The repos are private, so these are the stats.
 
 ## Faber
 
@@ -14,7 +14,7 @@ AI-adaptive courses for adults with apraxia, who can't use typical online course
 
 Turns speech-therapy session transcripts into step-by-step prompting guides, so untrained aides can run speech practice between sessions.
 
-- 1,155 commits, 216 merged PRs (May–Nov 2026)
+- 1,157 commits, 216 merged PRs (May–Nov 2026)
 - Bake-off harness comparing a local LLM against Claude
 
 ## vHelper
@@ -27,4 +27,4 @@ Claude Code jobs that manage scheduling, billing, invoice checks and budget trac
 
 AI skills that compare insurance claims against bills; flagged $9–15K in billing errors.
 
-- 18 commits (Apr–Aug 2026)
+- 17 commits (Apr–Jul 2026)
