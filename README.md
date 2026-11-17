@@ -2,6 +2,8 @@
 
 Product manager who builds. Since Mar 2026: **2,828 commits** and **565 merged PRs** across 4 private AI projects, built with Claude Code. The repos are private, so these are the stats.
 
+![Commits per day over the last year, across all my GitHub accounts](contributions.svg)
+
 ## Faber
 
 AI-adaptive courses for adults with apraxia, who can't use typical online courses because they can't reliably type.
