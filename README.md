@@ -36,7 +36,7 @@ Generates short lessons for daily-living skills, like safety and post-lunch clea
 
 ### InstructionsBridge (abandoned)
 
-The original vHelper prototype: a React app that walked aides through tasks step by step.
+The original vHelper prototype: a React app that scraped online ordering websites to auto-generate a first draft of step-by-step instructions, then let caregivers quickly edit them by chatting with AI and giving feedback.
 
 - **Impact:** learning project; discovered that step-by-step help works better as one-off AI generations that a human aide edits
 - ~311 commits, ~87 merged PRs (Mar–Jun 2026)
