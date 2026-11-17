@@ -6,7 +6,7 @@ Product manager and ex–frontend engineer who builds. Since Feb 2026: **2,879 c
 
 ## Motor accessibility projects
 
-Apps for people with motor challenges. Motor challenges are common in autism: a large U.S. study found [~87% of autistic children at risk for motor impairment](https://pmc.ncbi.nlm.nih.gov/articles/7297441). They can make it hard to speak clearly, type fast, or even point: a person may intend to point at one thing, but their body points at something else. That makes daily living and communication difficult.
+Apps for people with motor challenges. Motor challenges are common in autism: a large U.S. study found [~87% of autistic children at risk for motor impairment](https://pmc.ncbi.nlm.nih.gov/articles/7297441). They can make it hard to speak clearly, type fast, or even point: a person may intend to point at one thing, but their body points at something else. That makes daily living and communication difficult. Several of these apps use choiceboards: the person taps one choice among a few large tap targets, in randomized positions, which helps them communicate reliably.
 
 ### Faber
 
@@ -43,7 +43,7 @@ The original vHelper prototype: a React app that walked aides through tasks step
 
 ### ChoiceBoard (paused)
 
-Choiceboards, where people tap one choice out of large tap targets in randomized positions, help with reliable communication.
+A standalone choiceboard app for everyday communication.
 
 - **Status:** on pause until we can build a dynamic, AI-driven communication app, now specced as Faber's "Decide" feature
 - ~35 commits, ~5 merged PRs (Feb–Jun 2026)
