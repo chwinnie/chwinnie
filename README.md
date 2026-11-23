@@ -1,68 +1,65 @@
 # Winnie Cheng
 
-Product manager and ex–frontend engineer who builds. Since Feb 2026: **2,879 commits** and **571 merged PRs** across my private AI projects, built with Claude Code. The repos are private, so these are the stats.
+Product manager and ex–frontend engineer who builds. Since Feb 2026: **2,881 commits** and **572 merged PRs** across my private AI projects, built with Claude Code.
 
 ![Commits per day over the last year, across all my GitHub accounts](contributions.svg)
 
 ## Motor accessibility projects
 
-Apps for people with motor challenges. Motor challenges are common in autism: a large U.S. study found [~87% of autistic children at risk for motor impairment](https://pmc.ncbi.nlm.nih.gov/articles/7297441). They can make it hard to speak clearly, type fast, or even point: a person may intend to point at one thing, but their body points at something else. That makes daily living and communication difficult. Several of these apps use choiceboards: the person taps one choice among a few large tap targets, in randomized positions, which helps them communicate reliably.
+Apps for people with motor challenges, which are common in autism: one large U.S. study found [~87% of autistic children at risk for motor impairment](https://pmc.ncbi.nlm.nih.gov/articles/7297441). These challenges make it hard to speak clearly, type fast, or even point; a person may mean to tap one thing and hit another. One cause is apraxia, where the brain struggles to plan movements: the person knows what they want to say or tap but can't reliably make their mouth or hands do it. Several of these apps use choiceboards: a few large choices in randomized positions, so the person can answer reliably by tapping.
 
 ### Faber
 
-AI-adaptive courses for adults with apraxia, who can't use typical online courses because they can't reliably type.
+AI-driven courses where adults with apraxia learn to write their own songs and stories, one line at a time. Lessons are personalized to each learner's interests, and help fades step by step until they type on their own:
 
-- **Impact:** in beta with 8 families; 5 adults engaged for 30+ minutes vs. ~5 minutes with online courses
-- ~1,413 commits, ~272 merged PRs (May–Nov 2026), including V1 course generation built in an earlier repo
-- 591 product and design decisions logged in specs, with rationale
-- 31 eval reports gating AI prompt changes
-- A weekly scheduled cloud routine finds news stories for lessons
-- [Live site](https://vhelper-staging.vercel.app/about)
+![Six levels of writing help, from tapping a sentence idea to typing on their own](images/faber-typing-ladder.png)
+
+- **Impact:** in beta with 6 families; 5 of 6 adults stayed engaged 30+ minutes vs. ~5 minutes on online courses
+- ~1,415 commits, ~273 merged PRs (May–Nov 2026); 591 spec decisions logged; 31 eval reports gating prompt changes
+- [Learn more & demo](https://vhelper-staging.vercel.app/about)
 
 ### SpeechBridge
 
-Generates speech exercises and a conversation guide from photos of the person's day, so they practice using speech to describe it. Also turns speech-therapy session transcripts into step-by-step prompting guides, so untrained aides can run speech practice between sessions.
+Turns speech-therapy transcripts into step-by-step guides that untrained aides follow between sessions. Guides include speech exercises and conversation starters built from photos of the person's day, so they practice talking about it out loud.
 
 - **Impact:** helped my previously nonverbal brother use 1–2 words spontaneously; used by 2 autistic adults
-- ~924 commits, ~185 merged PRs (May–Nov 2026)
-- 195 product and design decisions logged in specs, with rationale
-- Bake-off harness comparing a local LLM against Claude
+- ~924 commits, ~185 merged PRs (May–Nov 2026); 195 spec decisions logged; local-LLM vs. Claude bake-off harness
 
 ### DailyLivingGuides
 
-Generates short lessons for daily-living skills, like safety and post-lunch cleanup, answered on choiceboards adapted for apraxia. For example: "A big spill gets a ___ towel first, so it doesn't soak into the table." → hamster · **paper** · tickle · xylophone
+Short choiceboard lessons for daily-living skills like safety and cleaning up after lunch. Early questions use obviously wrong answers to train intentional tapping: "A big spill gets a ___ towel first, so it doesn't soak into the table." → hamster · **paper** · tickle · xylophone
 
+- **Impact:** my brother opens the car door safely much more often; checking for cars before crossing is improving more slowly
 - ~163 commits, ~21 merged PRs (May–Oct 2026)
 
 ### InstructionsBridge (abandoned)
 
-The original vHelper prototype: a React app that scraped online ordering websites to auto-generate a first draft of step-by-step instructions, then let caregivers quickly edit them by chatting with AI and giving feedback.
+The first vHelper prototype, a React Native app. It turned a text description of a task into draft step-by-step instructions that caregivers refined by chatting with AI, and turned menu screenshots into multi-step ordering choiceboards (entrée → protein → toppings).
 
-- **Impact:** learning project; discovered that step-by-step help works better as one-off AI generations that a human aide edits
+- **Impact:** learning project; showed that step-by-step help works better as one-off AI drafts that an aide edits
 - ~311 commits, ~87 merged PRs (Mar–Jun 2026)
 
 ### ChoiceBoard (paused)
 
-A standalone choiceboard app for everyday communication.
+A standalone choiceboard app for everyday communication. Paused until it can build choices on the fly from what the person types or the aide says, using the family's lists of favorite foods, places and activities; that's now planned inside Faber.
 
-- **Status:** on pause until we can build a dynamic, AI-driven communication app, now specced as Faber's "Decide" feature
 - ~35 commits, ~5 merged PRs (Feb–Jun 2026)
 
 ## Business automation workflows
 
 ### vHelper
 
-Claude Code jobs that manage scheduling, billing, invoice checks and budget tracking for my autistic brother's state-funded services across 8 vendors, plus a nightly brief that pulls the day program's email and texts into one summary.
+Scheduled Claude Code jobs that run the admin for my autistic brother's state-funded services across 8 vendors: invoicing, invoice checks, budget tracking, room booking, and a nightly brief of the day program's email and texts.
 
 - **Impact:** caught 10 incorrect invoices and avoided 10+ weeks of payment delays
-- Runs as 3 scheduled cloud routines (monthly invoicing, hourly inbox triage, nightly daily brief) and a nightly local job that collects iMessages
-- ~16 commits, ~1 merged PR (Apr–Sep 2026) across the repos that collect the data and book rooms
+- 3 cloud routines and 1 nightly local job; ~16 commits, ~1 merged PR (Apr–Sep 2026)
 
 ## Personal automation workflows
 
 ### BillCheck
 
-Six Claude Code skills that check medical bills against insurance. They read UMR insurance claims plus bills (photos and PDFs), and flag any bill that charges more than the claim says we owe. They also track payment and reimbursement status for claims we file ourselves: when a provider doesn't bill insurance directly, we submit the claim and insurance pays us back.
+Six Claude Code skills that check medical bills against UMR insurance claims. They read bills from photos and PDFs, flag charges above what the claim says we owe, and track reimbursement on claims we file ourselves.
 
 - **Impact:** saved $9–15K in billing errors
+- **Engineering:** Data lives in Postgres on Supabase: claim lines reload on each import, a tracking table keyed on claim number persists across reimports and links claims to bills (many-to-one for bundled bills), and self-filed claims follow a CHECK-enforced status lifecycle.
 - ~17 commits (Apr–Jul 2026)
